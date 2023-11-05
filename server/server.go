@@ -13,7 +13,7 @@ import (
 	"google.golang.org/grpc"
 )
 
-var port = flag.Int("port", 3001, "listening port")
+var port = flag.Int("port", 5501, "listening port")
 
 type streamServer struct {
 	pb.UnimplementedUserServiceServer
@@ -54,7 +54,6 @@ func (s *streamServer) GetUserByUserId(stream pb.UserService_GetUserByUserIdServ
 }
 
 func (s *streamServer) GetUserListByIds(stream pb.UserService_GetUserListByIdsServer) error {
-
 	var u pb.UserResponseList
 	req, err := stream.Recv()
 	if err == io.EOF {

@@ -4,5 +4,5 @@ COPY go.mod .
 COPY go.sum .
 RUN go mod download
 COPY . .
-EXPOSE 3001
+EXPOSE 5501
 CMD ["go", "run", "/app/server/server.go"]

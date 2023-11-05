@@ -11,7 +11,7 @@ import (
 )
 
 var (
-	addr = flag.String("addr", "0.0.0.0:3001", "connect server address")
+	addr = flag.String("addr", "0.0.0.0:5501", "connect server address")
 )
 
 func main() {

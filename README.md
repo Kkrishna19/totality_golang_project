@@ -13,7 +13,7 @@ This Go-based application harnesses the capabilities of gRPC to facilitate a cli
 
 You can get this application up and running with just one command, assuming you have Docker installed.
 ```bash
-docker run -it -p 3001:3001 krishh182307/totality_golang_project
+docker run -it -p 5501:5501 krishh182307/totality_golang_project
 ```
 
 ## Getting Started
@@ -29,16 +29,16 @@ cd totality-golang-project
 ```
 
 ### 2. Run the Docker Container
-Launch a Docker container using the image, and ensure that the gRPC service port (e.g., 3001) is mapped to a port on your host machine (e.g., 3001).
+Launch a Docker container using the image, and ensure that the gRPC service port (e.g., 5501) is mapped to a port on your host machine (e.g., 5501).
 
 ```bash
-docker run -it -p 3001:3001 krishh182307/totality_golang_project
+docker run -it -p 5501:5501 krishh182307/totality_golang_project
 ```
 ### 4. Test the gRPC Service
 Use a gRPC client (e.g., BloomRPC, grpcurl) or Postman to connect to the gRPC service.
 
 * Method 1: GetUserByUserId
-Submit a gRPC request to "localhost:3001" using the "GetUserByUserId" method. Specify a User_ID to retrieve information about a specific user.
+Submit a gRPC request to "localhost:5501" using the "GetUserByUserId" method. Specify a User_ID to retrieve information about a specific user.
 #### Sample Request
 ```
 {
@@ -47,7 +47,7 @@ Submit a gRPC request to "localhost:3001" using the "GetUserByUserId" method. Sp
 ```
 
 * Method 2: GetUserListByIds
-Submit a gRPC request to the address "localhost:3001" using the "GetUserListByIds" method. Supply an array of User_IDs to retrieve data for multiple users.
+Submit a gRPC request to the address "localhost:5501" using the "GetUserListByIds" method. Supply an array of User_IDs to retrieve data for multiple users.
 
 #### Sample Request
 ```

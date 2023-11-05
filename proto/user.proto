@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package UserProtoService;
+package UserService;
 
 option go_package = ".;proto";
 
