@@ -22,7 +22,7 @@ Follow these steps to run and test the gRPC Client-Server application.
 ### 1. Clone the Repository
 Clone the repository using the command
 ~~~ 
-git clone 
+git clone https://github.com/Kkrishna19/totality_golang_project.git
 ~~~
 ```
 cd totality-golang-project
