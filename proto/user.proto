@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package UserProtoService;
+
+option go_package = ".;proto";
+
+message UserResponse{
+    int32 UserId = 1;
+    string FirstName = 2;
+    string City = 3;
+    string Phone = 4;
+    double Height = 5;
+    bool Married = 6;    
+}
+
+message UserRequest{
+    int32 UserId = 1;
+}
+
+message UserRequestList{
+    repeated UserRequest UserRequestList = 1;
+}
+message UserResponseList{
+    repeated UserResponse UserResponseList = 1;
+}
+
+service UserService{
+    rpc GetUserByUserId(stream UserRequest) returns (stream UserResponse);
+    rpc GetUserListByIds(stream UserRequestList) returns (stream UserResponseList);
+}
